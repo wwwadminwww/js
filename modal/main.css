@@ -1,0 +1,35 @@
+html, body {
+    margin : 0;
+    padding: 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgba(0, 255, 0, .2);
+}
+
+#modal_1 {
+    position: relative;
+    padding : 40px;
+    width : 500px;
+    background: rgba(255, 255, 0, .5);
+    font-size: 20px;
+    border: 2px solid lightblue;
+}
+
+#modal_1 button {
+    position: absolute;
+    font-size: 20px;
+    top : -35px;
+    right: -35px;
+}
+
+.hide {
+    display: none;
+}

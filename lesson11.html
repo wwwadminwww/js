@@ -1,0 +1,210 @@
+<html>
+<head>
+
+<style type="text/css">
+	.circle {
+  width: 200px;
+  height: 200px;
+  background-image: radial-gradient(black 0%, black 70%, transparent 70%);
+}
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.conroller{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid #dedede;
+    text-align: center;
+
+}
+.flex{
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.wrapper{
+    max-width:calc(75% - 30px);
+    width: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 15px 50px;
+}
+aside{
+    max-width:calc(25% - 30px);
+    width: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 15px 50px;
+}
+.col{
+    max-width: 33.3%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.active{
+	border: 1px solid red;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+    <div class="wrapper" id="tree">
+        <div class="line">
+            <div class="col">
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span class="active">1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="line">
+            <div class="col">
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+                <ul>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                    <li><span>1</span><span>&nbsp;</span><span>2</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+	<div class="conroller">
+       <p><button id="up">&#9650;</button></p>
+       <p class="flex">
+           <button id="left">&#9668;</button>
+           <button id="right">&#9658;</button>
+       </p>
+       <p><button id="down">&#9660;</button></p>
+   </div>
+   <ul class="list" id="list"></ul>
+   <script type="text/javascript" src="lesson12.js"></script>
+</body>
+</html>
