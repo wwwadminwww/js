@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #slider {
+                height: 15px;
+                width: 90%;
+                margin: 0 auto;
+                position: relative;
+                padding: 25px;
+            }
+            .track {
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 3px;
+                background: gray;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 10px;        
+            }
+            #ball {
+                top: 50%;
+                left: 0;
+                height: 8px;
+                width: 8px;
+                position: absolute;
+                background: silver;
+                border-radius: 50%;
+                transform: translateY(-50%);
+            }
+        </style>
+    </head>
+<body>
+<div id="slider">
+    <span class="track"></span>
+    <span id="ball"></span>
+</div>
+<script type="text/javascript" src="lesson19.js"></script>
+</body>
+</html>
