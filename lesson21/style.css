@@ -1,0 +1,68 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.justify{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+.settings{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+.settings li{
+    margin-left:5px;
+    list-style: none;
+
+}
+.rotate{
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.line_progress{
+    background: #f4f4f4;
+    height: 1px;
+}
+.progress{
+    display: block;
+    background: #47a3da;
+    height: 3px;
+    width: 0;
+}
+.slider_wrapper{
+    position: relative;
+}
+.slider_wrapper li{
+   flex-direction: row;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+}
+.slider_wrapper li.active{
+    opacity: 1;
+}
+.text{
+    width: 80%;
+}
+.image{
+    width: 20%;
+}
+.text p{
+    font-size:16px;
+    color: #989898;
+}
+.text a{
+    color: #47a3da;
+    font-size:16px;
+}
