@@ -1,0 +1,11 @@
+'use strict';
+var user = {};
+console.log(user);
+user.name = 'Вася';
+console.log('add field \'name\' to this object: ', user);
+user.surname = 'Петров';
+console.log('add field \'surname\' to this object: ', user);
+user.name = 'Сергей';
+console.log('change value for field \'name\': ', user);
+delete user.name;
+console.log('delete field \'name\' from this object: ', user);
