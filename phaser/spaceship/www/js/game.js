@@ -33,17 +33,11 @@ function update() {
             bullet.destroy();
             enemy = null;
             bullet = null;
-
-
             enemy = game.add.sprite(game.rnd.integerInRange(100, game.world.width - 100), 60, 'enemy1');
             enemy.anchor.setTo(0.5);
-
             console.log('hit');
         }
     }
-
-    // if (bullet == null && enemy == null){
-    // }
 
 
     if (cursors.left.isDown) {
