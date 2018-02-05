@@ -1,0 +1,18 @@
+body{
+    background: transparent;
+}
+
+.search_filtr{
+    background: #1b6d85;
+    box-sizing: border-box;
+    padding: 15px;
+}
+input{
+    width: 100%;
+
+}
+label{
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
