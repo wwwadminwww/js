@@ -130,10 +130,19 @@ function createList(arr){
 }
 search.addEventListener('keyup', function(e){
     var query = e.target.value;
-    console.log(query);
-    
+    console.log(query.toLowerCase());
+    var newlist = list.filter(function(e){
+        return (e.name.toLowerCase().includes(query));
+    });
+    console.log(newlist);
+    renderList(newlist, oldDiv);
 });
 
 console.log(oldDiv);
-oldDiv.parentElement.replaceChild(createList(list), oldDiv);
+
+function renderList(data, oldDiv){
+    oldDiv.parentElement.replaceChild(createList(data), oldDiv);
+}
+
+renderList(list, oldDiv);
 console.log(createList(list));
