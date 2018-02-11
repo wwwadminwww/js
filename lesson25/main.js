@@ -1,6 +1,5 @@
 'use strict';
 console.log('work');
-var oldDiv = document.querySelector('div.list-group');
 
 const  list = [
     {
@@ -10,7 +9,6 @@ const  list = [
         data :111111111111,
         href : "#"
     },
-
     {
         id :2,
         name: 'Лоґан: Росомаха',
@@ -36,7 +34,7 @@ const  list = [
         id :5,
         name: 'Геошто́рм',
         description : 'американський фантастичний фільм-катастрофа сценариста, продюсера і режисера Діна Девліна та його режисерський дебют.',
-        data :111152222,
+        data :111,
         href : "#"
     },
     {
@@ -96,7 +94,15 @@ const  list = [
         href : "#"
     },
 ];
+
+// var oldDiv = document.querySelector('div.list-group');
 var search = document.getElementById('search');
+var startDate = document.getElementById('startDate');
+var endDate = document.getElementById('endDate');
+var oldDiv = document.getElementById('renderDiv');
+
+startDate = getMinDate(list);
+endDate = getMaxDate(list);
 
 function createItem(data) {
     console.log(data);
@@ -108,7 +114,8 @@ function createItem(data) {
     description.innerHTML = data.description;
     description.setAttribute('class', 'list-group-text');
     var date = document.createElement('span');
-    date.innerHTML = data.date;
+    // date.innerHTML = data.data;
+    date.innerHTML = 'Date: ' + (new Date(data.data).toLocaleString('ru', {day:'numeric', month: 'long', year: 'numeric'}));
     date.setAttribute('class', 'label label-success');
 
 
@@ -128,21 +135,65 @@ function createList(arr){
     });
     return list;
 }
-search.addEventListener('keyup', function(e){
-    var query = e.target.value;
-    console.log(query.toLowerCase());
-    var newlist = list.filter(function(e){
-        return (e.name.toLowerCase().includes(query));
-    });
-    console.log(newlist);
-    renderList(newlist, oldDiv);
-});
 
-console.log(oldDiv);
+
+// console.log(oldDiv);
 
 function renderList(data, oldDiv){
+    console.log(data);
     oldDiv.parentElement.replaceChild(createList(data), oldDiv);
 }
 
+// search.addEventListener('keyup', function(e){
+//     var query = e.target.value;
+//     console.log(query.toLowerCase());
+//     var newlist = list.filter(function(e){
+//         return (e.name.toLowerCase().includes(query));
+//     });
+//     // console.log(newlist);
+//     renderList(newlist, oldDiv);
+// });
+
+startDate.addEventListener('change', function(e){
+    console.dir(e.target.valueAsNumber);
+});
+
+endDate.addEventListener('change', function(e){
+    console.log(e.target.valueAsNumber);
+});
+search.addEventListener('keyUp', function(e){
+    var newList = searchDate(e.target.value, startDate, endDate);
+    console.log(newList);
+    renderList(newList, oldDiv);
+});
+
+
+
+function searchDate(search, startDate, endDate){
+    // var search = '';
+    // var startDate = getMinDate(list).data;
+    // var endDate = getMaxDate(list).data;
+    
+    return list.filter(function(e){
+        return t.name.toLowerCase().includes(search.toLowerCase());
+    }).filter(function(e){
+        return (e.data >= startDate && e.data <= endDate);
+    });
+
+}
+
+function getMaxDate(arr){
+    arr.reduce(function(acc, curr){
+        return (acc.data >= curr.data) ? acc : curr;
+    });
+}
+
+function getMinDate(arr){
+    arr.reduce(function(acc, curr){
+        return (acc.data <= curr.data) ? acc : curr;
+    });
+}
+
+
 renderList(list, oldDiv);
-console.log(createList(list));
+// console.log(createList(list));
