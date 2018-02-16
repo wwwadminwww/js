@@ -101,11 +101,11 @@ var startDate = document.getElementById('startDate');
 var endDate = document.getElementById('endDate');
 var oldDiv = document.getElementById('renderDiv');
 
-startDate = getMinDate(list);
-endDate = getMaxDate(list);
+// startDate = getMinDate(list);
+// endDate = getMaxDate(list);
 
 function createItem(data) {
-    console.log(data);
+    // console.log(data);
     var item = document.createElement('a');
     var name = document.createElement('h4');
     name.innerHTML = data.name;
@@ -140,30 +140,38 @@ function createList(arr){
 // console.log(oldDiv);
 
 function renderList(data, oldDiv){
-    console.log(data);
+    // console.log(oldDiv);
+    // console.log(createList(data));
     oldDiv.parentElement.replaceChild(createList(data), oldDiv);
+
 }
 
-// search.addEventListener('keyup', function(e){
-//     var query = e.target.value;
-//     console.log(query.toLowerCase());
-//     var newlist = list.filter(function(e){
-//         return (e.name.toLowerCase().includes(query));
-//     });
-//     // console.log(newlist);
-//     renderList(newlist, oldDiv);
-// });
+search.addEventListener('keyup', function(e){
+    var query = e.target.value;
+    // console.log(query.toLowerCase());
+    var newlist = list.filter(function(e){
+        return (e.name.toLowerCase().includes(query));
+    });
+    // console.log(newlist);
+    renderList(newlist, oldDiv);
+});
 
 startDate.addEventListener('change', function(e){
     console.dir(e.target.valueAsNumber);
+    startDate = (new Date(e.target.valueAsNumber || getMinDate(list))).setHours(0);
+    var newList = searchDate('', startDate, endDate);
+    console.log(oldDiv);
+    renderList(newList, oldDiv);
 });
 
 endDate.addEventListener('change', function(e){
-    console.log(e.target.valueAsNumber);
+    // console.log(e.target.valueAsNumber);
+    endDate = (new Date(e.target.valueAsNumber || getMinDate(list))).setHours(0);
 });
+
 search.addEventListener('keyUp', function(e){
     var newList = searchDate(e.target.value, startDate, endDate);
-    console.log(newList);
+    // console.log(newList);
     renderList(newList, oldDiv);
 });
 
@@ -175,7 +183,7 @@ function searchDate(search, startDate, endDate){
     // var endDate = getMaxDate(list).data;
     
     return list.filter(function(e){
-        return t.name.toLowerCase().includes(search.toLowerCase());
+        return e.name.toLowerCase().includes(search.toLowerCase());
     }).filter(function(e){
         return (e.data >= startDate && e.data <= endDate);
     });
@@ -197,3 +205,12 @@ function getMinDate(arr){
 
 renderList(list, oldDiv);
 // console.log(createList(list));
+
+var arr = [5,4,2,1,null];
+arr.sort(function(a,b){
+    if (a > b){
+        return 1;
+    }else{
+        return -1;
+    }
+});
