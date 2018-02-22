@@ -141,9 +141,9 @@ function createList(arr){
 
 function renderList(data, oldDiv){
     // console.log(oldDiv);
-    // console.log(createList(data));
+    console.log(createList(data));
     oldDiv.parentElement.replaceChild(createList(data), oldDiv);
-
+    // oldDiv.innerHTML = createList(data);
 }
 
 search.addEventListener('keyup', function(e){
@@ -206,11 +206,11 @@ function getMinDate(arr){
 renderList(list, oldDiv);
 // console.log(createList(list));
 
-var arr = [5,4,2,1,null];
-arr.sort(function(a,b){
-    if (a > b){
-        return 1;
-    }else{
-        return -1;
-    }
-});
+// var arr = [5,4,2,1,null];
+// arr.sort(function(a,b){
+//     if (a.name > b.name){
+//         return 1;
+//     }else{
+//         return -1;
+//     }
+// });
