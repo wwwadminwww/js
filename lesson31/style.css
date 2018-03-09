@@ -1,0 +1,17 @@
+#tabs {
+    display: none;
+}
+#form {
+    display: none;
+    height: 25vh;
+    width: 60%;
+    border: 1px solid red;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    box-sizing: border-box;
+}
+#form.active {
+    display: block;
+}
