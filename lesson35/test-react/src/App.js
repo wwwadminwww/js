@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Book from './Components/Book';
 import Input from './Components/Input';
+import Toread from './Components/Toread';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Book />
           <Input />
           <Input />
+          <Toread />
       </div>
     );
   }
