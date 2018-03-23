@@ -1,0 +1,9 @@
+.checkbox {
+    height: 20px;
+    width: 20px;
+    background: aquamarine;
+}
+
+.active {
+    background: red;
+}
