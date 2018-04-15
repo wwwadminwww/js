@@ -1,0 +1,73 @@
+.Toread{
+    border: 2px solid black;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.ToreadHeader{
+    border-bottom: 2px solid red;
+}
+
+.ToreadHeader ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.ToreadHeader li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.ToreadList li {
+    border: 1px solid black;
+    list-style-type: none;
+    margin: 10px;
+}
+
+.ToreadItem{
+    display: flex;
+    justify-content: space-around;
+}
+
+.AddItem {
+    border: 1px solid black;
+    width: 50%;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+
+#wrapper{
+    background: beige;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#header{
+    background: brown;
+    width: 200px;
+    height: 200px;
+}
+
+#menu{
+    background: aqua;
+    width: 150px;
+    height: 100px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    box-shadow: 10px 10px 10px black;
+    /* z-index: 2; */
+}
+
+#footer{
+    background: blueviolet;
+    width: 130px;
+    height: 100px;
+    position: relative;
+    top: -70px;
+    left: -30px;
+    z-index: -1;
+}
