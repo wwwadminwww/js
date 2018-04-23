@@ -1,11 +1,14 @@
 import React from 'react';
+import ItemInput from './ItemInput';
 import './ToreadItem.css';
 
 class ToreadItem extends React.Component 
 {
     constructor(props){
         super(props);
-        this.state = {};
+        this.state = {
+            isEdit: false,
+        };
     }
 
     handleClick =()=>{
@@ -14,6 +17,18 @@ class ToreadItem extends React.Component
 
     handleDelete =()=>{
         this.props.handleDelete(this.props.children.id);
+    }
+
+    handleEdit =()=>{
+        this.setState({
+            isEdit:true,
+        });
+    }
+
+    handleSave =()=>{
+        this.setState({
+            isEdit:false,
+        });
     }
 
     render(){
@@ -28,7 +43,11 @@ class ToreadItem extends React.Component
                     <p>{this.props.children.title}</p>
                 </div>
                 <div className="edit">
-                    <a className="edit_button" title="edit" ><i className="material-icons">edit</i></a>
+                    {
+                        this.state.isEdit 
+                        ? <p><ItemInput itemId={this.props.children.id} handleSave={this.props.handleItemSave} value={this.props.children.title} /><i onClick={this.handleSave} className="material-icons">edit</i></p>
+                        : <a className="edit_button" title="edit" ><i onClick={this.handleEdit} className="material-icons">edit</i></a>
+                    }
                     <a className="delete_button" onClick={this.handleDelete} ><i className="material-icons">delete</i></a>
                 </div>
             </li>

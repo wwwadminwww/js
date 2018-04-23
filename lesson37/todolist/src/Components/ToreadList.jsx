@@ -44,14 +44,23 @@ class ToreadList extends React.Component
         this.setState({list:newState});
     }
 
-    
+    handleItemSave=(id, text)=>{
+        this.state.list.map(e=>{
+            if (e.id === id){
+                e.title = text;
+            }
+            return e;
+        });
+    }
+
+
 
     render (){
         return (
             <ul className="ToreadList"  >
                 {
                     this.state.list.map(e => {
-                        return <ToreadItem completed={e.completed} onStatusChange={this.handleItemStatusChange} handleDelete={this.handleItemDelete}>{e}</ToreadItem>
+                        return <ToreadItem completed={e.completed} onStatusChange={this.handleItemStatusChange} handleDelete={this.handleItemDelete} handleItemSave={this.handleItemSave}>{e}</ToreadItem>
                     })
                 }
             </ul>
