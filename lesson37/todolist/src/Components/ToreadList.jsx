@@ -12,7 +12,7 @@ class ToreadList extends React.Component
                 {id:2, title: 'Second task', completed: false, active: false},
                 {id:3, title: 'Third task', completed: true, active: false},
                 {id:4, title: 'Fourth task', completed: false, active: false},
-            ]
+            ],
         }
     }
 
@@ -53,9 +53,20 @@ class ToreadList extends React.Component
         });
     }
 
-
+    handleItemAdd=()=>{
+        if (this.props.newItem){
+            let newList = this.state.list.push({id:5, title:this.props.newItem, completed:false, active:false});
+            this.setState({
+                list: newList,
+            });
+            console.log('working ' + this.state.list);
+        }else{
+            console.log('not working ' + this.state.list);
+        }
+    }
 
     render (){
+        console.log('working ' + this.props.newItem);
         return (
             <ul className="ToreadList"  >
                 {

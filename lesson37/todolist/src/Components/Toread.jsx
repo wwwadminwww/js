@@ -4,14 +4,32 @@ import ToreadList from './ToreadList';
 import AddItem from './AddItem';
 import './Toread.css';
 
-function Toread(){
-    return (
-        <div className="Toread">
-            <ToreadHeader />
-            <ToreadList />
-            <AddItem />
-        </div>
-    )
+
+
+class Toread extends React.Component
+{
+    constructor(props){
+        super(props);
+        this.state = {
+            newItemTitle: '',
+        }
+    }
+
+    handleAddNew=(text)=>{
+        console.log('i am Toread ' + text);
+        this.setState({newItemTitle: text});
+    }
+
+    render(){
+        return (
+            <div className="Toread">
+                <ToreadHeader />
+                <ToreadList newItem={this.state.newItemTitle} />
+                <AddItem handleAddItem={this.handleAddNew} />
+            </div>
+        )
+    }
+
 }
 
 export default Toread;
