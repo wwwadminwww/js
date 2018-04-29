@@ -1,3 +1,4 @@
 /node_modules/
 .giignore
+package-lock.json
 
